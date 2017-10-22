@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs/utils.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">libs</a> utils.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.41% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/36</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+const bankUtils = {
+	/**
+	 * Типы банковскиx карт
+	 * @type {Object}
+	 */
+	cardTypes: {
+		VISA: 'visa',
+		MAESTRO: 'maestro',
+		MASTERCARD: 'mastercard',
+		MIR: 'mir'
+	},
+&nbsp;
+	/**
+	 * Проверяет тип карты
+	 * @param {Number} val номер карты
+	 * @returns {String} тип карты
+	 */
+	getCardType(val) {
+		// Бины ПС МИР 220000 - 220499
+		const mirBin = <span class="cstat-no" title="statement not covered" >/^220[0-4]\s?\d\d/;</span>
+&nbsp;
+		const firstNum = <span class="cstat-no" title="statement not covered" >val[0];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		switch (firstNum) {</span>
+			case '2': {
+<span class="cstat-no" title="statement not covered" >				if (mirBin.test(val)) {</span>
+<span class="cstat-no" title="statement not covered" >					return bankUtils.cardTypes.MIR;</span>
+				}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				return '';</span>
+			}
+			case '4': {
+<span class="cstat-no" title="statement not covered" >				return bankUtils.cardTypes.VISA;</span>
+			}
+			case '5': {
+				const secondNum = <span class="cstat-no" title="statement not covered" >val[1] || '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				if (secondNum === '0' || secondNum &gt; '5') {</span>
+<span class="cstat-no" title="statement not covered" >					return bankUtils.cardTypes.MAESTRO;</span>
+				}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				return bankUtils.cardTypes.MASTERCARD;</span>
+			}
+			case '6': {
+<span class="cstat-no" title="statement not covered" >				return bankUtils.cardTypes.MAESTRO;</span>
+			}
+			default: {
+<span class="cstat-no" title="statement not covered" >				return '';</span>
+			}
+		}
+	},
+&nbsp;
+	/**
+	 * Форматирует номер карты, используя заданный разделитель
+	 *
+	 * @param {String} originCardNumber номер карты
+	 * @param {String} delimeter = '\u00A0' разделитель
+	 * @returns {String} форматированный номер карты
+	 */
+	formatCardNumber(originCardNumber, delimeter = <span class="branch-0 cbranch-no" title="branch not covered" >'\u00A0')</span> {
+		const formattedCardNumber = <span class="cstat-no" title="statement not covered" >[];</span>
+		let cardNumber = <span class="cstat-no" title="statement not covered" >originCardNumber;</span>
+<span class="cstat-no" title="statement not covered" >		if (cardNumber) {</span>
+<span class="cstat-no" title="statement not covered" >			while (cardNumber &amp;&amp; typeof cardNumber === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >				formattedCardNumber.push(cardNumber.substr(0, 4));</span>
+<span class="cstat-no" title="statement not covered" >				cardNumber = cardNumber.substr(4);</span>
+<span class="cstat-no" title="statement not covered" >				if (cardNumber) {</span>
+<span class="cstat-no" title="statement not covered" >					formattedCardNumber.push(delimeter);</span>
+				}
+			}
+		}
+<span class="cstat-no" title="statement not covered" >		return formattedCardNumber.join('');</span>
+	},
+&nbsp;
+	/**
+	 * Проверяет номер карты по алгоритму Луна
+	 *
+	 * @param {Number} cardNumber Номер карты
+	 * @returns {Boolean} Валиден ли номер карты
+	 */
+	Moon(cardNumber) {
+		const arr = <span class="cstat-no" title="statement not covered" >[]</span>
+		const _cardNumber = <span class="cstat-no" title="statement not covered" >cardNumber.toString();</span>
+<span class="cstat-no" title="statement not covered" >		for(let i = 0; i &lt; _cardNumber.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >			if (i % 2 === 0) {</span>
+				const m = <span class="cstat-no" title="statement not covered" >parseInt(_cardNumber[i], 10) * 2;</span>
+<span class="cstat-no" title="statement not covered" >				if (m &gt; 9) {</span>
+<span class="cstat-no" title="statement not covered" >					arr.push(m - 9);</span>
+				} else {
+<span class="cstat-no" title="statement not covered" >					arr.push(m);</span>
+				}
+			} else {
+				const n = <span class="cstat-no" title="statement not covered" >parseInt(_cardNumber[i], 10);</span>
+<span class="cstat-no" title="statement not covered" >				arr.push(n)</span>
+			}
+		}
+		const summ = <span class="cstat-no" title="statement not covered" >arr.reduce(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >a + b)</span>;</span>
+<span class="cstat-no" title="statement not covered" >		return Boolean(!(summ % 10));</span>
+	}
+};
+&nbsp;
+module.exports = bankUtils;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 15 2017 13:24:45 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -8,27 +8,34 @@ const bodyParser = require('koa-bodyparser')();
 
 const logger = require('libs/logger')('app');
 
-const {renderToStaticMarkup} = require('react-dom/server');
+const { renderToStaticMarkup } = require('react-dom/server');
 
+// Cards Controllers
 const getCardsController = require('./controllers/cards/get-cards');
 const createCardController = require('./controllers/cards/create');
 const deleteCardController = require('./controllers/cards/delete');
-const getTransactionController = require('./controllers/transactions/get');
-const createTransactionsController = require('./controllers/transactions/create');
 const cardToCard = require('./controllers/cards/card-to-card');
 const cardToMobile = require('./controllers/cards/card-to-mobile');
 const mobileToCard = require('./controllers/cards/mobile-to-card');
 
+// Transaction Controllers
+const getTransactionController = require('./controllers/transactions/get');
+const createTransactionsController = require('./controllers/transactions/create');
+const getTransactionsController = require('./controllers/transactions/get-transactions');
+
+// Error Controller
 const errorController = require('./controllers/error');
 
 const ApplicationError = require('libs/application-error');
+
+// Models
 const CardsModel = require('source/models/cards');
 const TransactionsModel = require('source/models/transactions');
 
-const getTransactionsController = require('./controllers/transactions/get-transactions');
 
 const app = new Koa();
 
+// Mocked User Data
 const DATA = {
 	user: {
 		login: 'samuel_johnson',
@@ -82,7 +89,7 @@ app.use(async (ctx, next) => {
 	} catch (err) {
 		logger.error('Error detected', err);
 		ctx.status = err instanceof ApplicationError ? err.status : 500;
-		ctx.body = `Error [${err.message}] :(`;
+		ctx.body = `Error [${err.message}] 😬`;
 	}
 });
 
@@ -107,3 +114,5 @@ app.use(serve('./public'));
 app.listen(3000, () => {
 	logger.info('Application started');
 });
+
+module.exports = app;

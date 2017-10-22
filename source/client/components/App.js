@@ -103,7 +103,7 @@ class App extends Component {
 			activeCardIndex: 0,
 			removeCardId: 0,
 			isCardRemoving: false,
-			isCardsEditable: false
+			isCardsEditable: true
 		};
 	}
 

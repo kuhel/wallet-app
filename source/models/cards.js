@@ -4,6 +4,8 @@ const ApplicationError = require('libs/application-error');
 
 const FileModel = require('./common/fileModel');
 
+const BankUtils = require('libs/utils');
+
 class Cards extends FileModel {
 	constructor() {
 		super('cards.json');
@@ -18,6 +20,7 @@ class Cards extends FileModel {
 	async create(card) {
 		const isDataValid = card
 			&& Object.prototype.hasOwnProperty.call(card, 'cardNumber')
+			&& BankUtils.Moon(card.cardNumber)
 			&& Object.prototype.hasOwnProperty.call(card, 'balance');
 
 		if (isDataValid) {
@@ -29,8 +32,7 @@ class Cards extends FileModel {
 			await this._saveUpdates();
 			return newCard;
 		}
-
-		throw new ApplicationError('Card data is invalid', 400);
+		throw new ApplicationError('💳 Card data is invalid', 400);
 	}
 
 	/**
@@ -40,7 +42,7 @@ class Cards extends FileModel {
 	async remove(id) {
 		const card = await this.get(id);
 		if (!card) {
-			throw new ApplicationError(`Card with ID=${id} not found`, 404);
+			throw new ApplicationError(`💳 Card with ID=${id} not found`, 404);
 		}
 		const cardIndex = this._dataSource.indexOf(card);
 		this._dataSource.splice(cardIndex, 1);

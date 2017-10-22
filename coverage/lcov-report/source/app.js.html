@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for source/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">source</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.13% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>53/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.14% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.48% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>53/62</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+const path = require('path');
+const Koa = require('koa');
+const serve = require('koa-static');
+const router = require('koa-router')();
+const bodyParser = require('koa-bodyparser')();
+&nbsp;
+const logger = require('libs/logger')('app');
+&nbsp;
+const { renderToStaticMarkup } = require('react-dom/server');
+&nbsp;
+// Cards Controllers
+const getCardsController = require('./controllers/cards/get-cards');
+const createCardController = require('./controllers/cards/create');
+const deleteCardController = require('./controllers/cards/delete');
+const cardToCard = require('./controllers/cards/card-to-card');
+const cardToMobile = require('./controllers/cards/card-to-mobile');
+const mobileToCard = require('./controllers/cards/mobile-to-card');
+&nbsp;
+// Transaction Controllers
+const getTransactionController = require('./controllers/transactions/get');
+const createTransactionsController = require('./controllers/transactions/create');
+const getTransactionsController = require('./controllers/transactions/get-transactions');
+&nbsp;
+// Error Controller
+const errorController = require('./controllers/error');
+&nbsp;
+const ApplicationError = require('libs/application-error');
+&nbsp;
+// Models
+const CardsModel = require('source/models/cards');
+const TransactionsModel = require('source/models/transactions');
+&nbsp;
+&nbsp;
+const app = new Koa();
+&nbsp;
+// Mocked User Data
+const DATA = {
+	user: {
+		login: 'samuel_johnson',
+		name: 'Samuel Johnson'
+	}
+};
+&nbsp;
+function <span class="fstat-no" title="function not covered" >getView(</span>viewId) {
+	const viewPath = <span class="cstat-no" title="statement not covered" >path.resolve(__dirname, 'views', `${viewId}.server.js`);</span>
+<span class="cstat-no" title="statement not covered" >	delete require.cache[require.resolve(viewPath)];</span>
+<span class="cstat-no" title="statement not covered" >	return require(viewPath);</span>
+}
+&nbsp;
+// Сохраним параметр id в ctx.params.id
+router.param('id', <span class="fstat-no" title="function not covered" >(i</span>d, ctx, next) =&gt; <span class="cstat-no" title="statement not covered" >next())</span>;
+&nbsp;
+router.get('/', <span class="fstat-no" title="function not covered" >(c</span>tx) =&gt; {
+	const indexView = <span class="cstat-no" title="statement not covered" >getView('index');</span>
+	const indexViewHtml = <span class="cstat-no" title="statement not covered" >renderToStaticMarkup(indexView(DATA));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	ctx.body = indexViewHtml;</span>
+});
+&nbsp;
+router.get('/cards/', getCardsController);
+router.post('/cards/', createCardController);
+router.delete('/cards/:id', deleteCardController);
+&nbsp;
+router.get('/cards/:id/transactions/', getTransactionController);
+router.post('/cards/:id/transactions/', createTransactionsController);
+&nbsp;
+router.post('/cards/:id/transfer', cardToCard);
+router.post('/cards/:id/pay', cardToMobile);
+router.post('/cards/:id/fill', mobileToCard);
+&nbsp;
+router.get('/transactions/', getTransactionsController);
+&nbsp;
+router.all('/error', errorController);
+&nbsp;
+// logger
+app.use(async (ctx, next) =&gt; {
+	const start = new Date();
+	await next();
+	const ms = new Date() - start;
+	logger.info(`${ctx.method} ${ctx.url} - ${ms}ms`);
+});
+&nbsp;
+// error handler
+app.use(async (ctx, next) =&gt; {
+	try {
+		await next();
+	} catch (err) {
+<span class="cstat-no" title="statement not covered" >		logger.error('Error detected', err);</span>
+<span class="cstat-no" title="statement not covered" >		ctx.status = err instanceof ApplicationError ? err.status : 500;</span>
+<span class="cstat-no" title="statement not covered" >		ctx.body = `Error [${err.message}] 😬`;</span>
+	}
+});
+&nbsp;
+// Создадим модель Cards и Transactions на уровне приложения и проинициализируем ее
+app.use(async (ctx, next) =&gt; {
+	ctx.cardsModel = new CardsModel();
+	ctx.transactionsModel = new TransactionsModel();
+&nbsp;
+	await Promise.all([
+		ctx.cardsModel.loadFile(),
+		ctx.transactionsModel.loadFile()
+	]);
+&nbsp;
+	await next();
+});
+&nbsp;
+&nbsp;
+app.use(bodyParser);
+app.use(router.routes());
+app.use(serve('./public'));
+&nbsp;
+app.listen(3000, () =&gt; {
+	logger.info('Application started');
+});
+&nbsp;
+module.exports = app;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 15 2017 13:24:45 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

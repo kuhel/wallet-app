@@ -14,3 +14,11 @@ Thumbs.db
 npm-debug.log*
 package-lock.json
 logs/
+
+__tests__/
+coverage/
+libs/
+public/
+source/views/
+
+.gitignore
